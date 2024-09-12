@@ -2,11 +2,13 @@ package model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.Objects;
 
 @AllArgsConstructor
 @Getter
+@ToString
 public class Product implements Comparable<Product> {
 
     private String productCode;
@@ -30,21 +32,6 @@ public class Product implements Comparable<Product> {
     @Override
     public int hashCode() {
         return Objects.hashCode(productCode);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productCode='" + productCode + '\'' +
-                ", productName='" + productName + '\'' +
-                ", productLine='" + productLine + '\'' +
-                ", productScale='" + productScale + '\'' +
-                ", productVendor='" + productVendor + '\'' +
-                ", productDescription='" + productDescription + '\'' +
-                ", quantityInStock=" + quantityInStock +
-                ", buyPrice=" + buyPrice +
-                ", MSRP=" + MSRP +
-                '}';
     }
 
     @Override
